@@ -1,0 +1,270 @@
+body{
+    background-image: url(../imagenes/pexels-photo-408518.jpeg);
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    margin: 0; 
+}
+
+/*
+DISEÑO PARA EL MENÚ HORIZONTAL...
+*/
+header{
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    font-family: sans-serif;
+    font-size: 30px;
+    transition: all 1s;
+
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+}
+header #btn_menu_hori{
+    display: none;
+}
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.8);
+}
+header .menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+
+}
+header .menu li{
+    border-right: 1px solid #fff;
+}
+header .menu li:hover{
+    background: rgba(0,0,0,0.5);
+}
+header .menu li a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+@media(max-width:768px){
+    header label{
+        display: block;
+
+    }
+    header .menu{
+        position: absolute;
+        background: rgba(0,0,0,.6);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    header .menu ul{
+        flex-direction: column;
+    }
+    header .menu li{
+        border-top: 1px solid #fff;
+    }
+    header #btn_menu_hori:checked ~ .menu{
+        margin: 0;
+    }
+}
+/*
+FINN   DISEÑO PARA EL MENÚ HORIZONTAL...
+*/
+
+.titulo_general{
+    text-align: center;
+    color:#FFEB3A;
+    font-size: 84px;
+    font-family: cursive;
+    font-weight: bold;
+    -webkit-text-stroke: 4px black;
+}
+@media(max-width:768px){
+    .titulo_general{
+        font-size: 37px;
+        -webkit-text-stroke: 2px black;
+    }
+}
+
+/*
+DISEÑO PARA EL MENÚ FORMULARIO DE LOGIN
+*/
+.form_logeo{
+    position: absolute;
+    top: 320px;
+    left: 30px;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.8);
+    width: 400px;
+    height: 280px;
+    border: 3px solid white;
+}
+.form_login_titulo{
+    font-family:cursive;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.form_login_text,
+.form_login_pass{
+    position: absolute;
+    left: 56px;
+    font-size:20px;
+    text-indent: 20px;
+    width: 292px;
+    height: 25px;
+    border:none;
+    font-family: 'Roboto', sans-serif;
+}
+.form_login_text{
+    top: 125px;
+}
+.form_login_pass{
+    top: 166px;
+}
+.form_login_pass:focus{
+    border: 4px solid #2FB5D2;
+    left: 53px;
+    top: 164px;
+}
+.form_login_text:focus{
+    border: 4px solid #2FB5D2;
+    left: 53px;
+    top: 123px;
+}
+.form_login_btn{
+    position: absolute;
+    top: 206px;
+    left: 56px;
+    width: 292px;
+    height: 32px;
+    cursor: pointer;
+    background: #FFEB3A;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    transition: all 1s;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 7px;
+}
+.form_login_btn:hover{
+    background: #74B423;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+.form_login_btn:active{
+    transform: scale(0.7);
+}
+.form_login_nuevo{
+    position: relative;
+    top: 105px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.form_login_nuevo_link{
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+.form_login_nuevo_link:hover{
+    color: #FFEB3A;
+    text-decoration: underline;
+}
+/*
+FIN DISEÑO PARA EL MENÚ FORMULARIO DE LOGIN
+*/
+
+/*  datos personales*/ 
+.footer{
+    position: absolute;
+    top: 680px;
+    width: 100%;
+    height: 150px;
+    background: rgba(0,0,0,.7);
+}
+.pol,
+.pol2,
+.año{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+}
+.pol{
+    top: 10px;
+}
+.pol2{
+    top: 40px; 
+}
+.año{
+    top: 70px;
+    font-size: 25px;
+}
+
+.mif-facebook:hover{
+    -webkit-transform:scale(1.1);
+}
+.mif-twitter:hover{
+    -webkit-transform:scale(1.1);
+}
+.mif-instagram:hover{
+    -webkit-transform:scale(1.1);
+}
+.mif-github:hover{
+    -webkit-transform:scale(1.1);
+}
+.mif-linkedin:hover{
+    -webkit-transform:scale(1.1);
+}
+.mif-facebook{
+    position: absolute;
+    top: 110px;
+    left: 570px;
+}
+.mif-twitter{
+    position: absolute;
+    top: 110px;
+    left: 615px;
+}
+.mif-instagram{
+    position: absolute;
+    top: 110px;
+    left: 660px;
+}
+.mif-github{
+    position: absolute;
+    top: 110px;
+    left: 705px;
+}
+.mif-linkedin{
+    position: absolute;
+    top: 110px;
+    left: 750px;
+}
+/*  FINNNN datos personales */ 
